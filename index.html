@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="shortcut icon" href="img/sand-clock.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Age Calculator</title>
+</head>
+<body>
+  <!-- START Main Section -->
+  <main id="main">
+    <!-- START Header Section -->
+    <section id="header">
+      <div>
+        <label for="day" class="title">DAY</label>
+        <input type="number" min="1" max="31" maxlength="2" id="day-input" placeholder="DD">
+        <p class="required">This field is required</p>
+      </div>
+      <div>
+        <label for="month" class="title">MONTH</label>
+        <input type="number" min="1" max="12" id="month-input" placeholder="MM">
+        <p class="required">This field is required</p>
+      </div>
+      <div>
+        <label for="year" class="title">YEAR</label>
+        <input type="number" min="1000" id="year-input" placeholder="YYYY">
+        <p class="required">This field is required</p>
+      </div>
+    </section>
+    <!-- END Header Section -->
+
+    <!-- START Body Section -->
+    <section id="body">
+      <div id="line"></div>
+      <div>
+        <div class="center">
+          <img id="arrow-icon" src="./img/icon-arrow.svg" alt="arrow icon">
+          <p id="calculate-text">Calculate</p>
+        </div>
+        <div class="center">
+          <svg id="reset" stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"></path></svg>
+          <p id="reset-text">Reset</p>
+        </div>
+      </div>
+    </section>
+    <!-- END Body Section -->
+
+    <!-- START Footer Section -->
+    <section id="footer">
+      <p><span id="year-text">--</span> years</p>
+      <p><span id="month-text">--</span> months</p>
+      <p><span id="day-text">--</span> days</p>
+    </section>
+    <!-- END Footer Section -->
+  </main>
+  <!-- END Main Section -->
+  <script src="./js/script.js"></script>
+</body>
+</html>
