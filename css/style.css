@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: rgb(132,78,247);
+  --secondary-color: #f0f0f0;
+  --text-danger: #de5f5f;
+  --gray: #908f8f;
+  --light-gray: #c6c4c4;
+  --white: #ffffff;
+  --black: rgb(0, 0, 0);
+  --pulse: rgba(132, 78, 247, 0.5);
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* START Main Section */
+#main {
+  max-width: 800px;
+  max-height: 700px;
+  width: 80%;
+  height: 65%;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+/* END Main Section */
+
+/* START Header Section */
+#main > #header {
+  display: flex;
+}
+
+#main > #header > div {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+}
+
+#main > #header > div > label {
+  font-weight: 600;
+  color: var(--gray);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#main > #header > div > input {
+  width: 80%;
+  height: 60px;
+  padding: 10px 15px;
+  font-size: 26px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--light-gray);
+}
+
+#main > #header > div > .required {
+  color: var(--text-danger);
+  visibility: hidden;
+  font-size: 14px;
+  font-style: italic;
+}
+
+#main > #header > div > input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+/* CSS to remove arrows on number input */
+#main > #header > div > input[type="number"]::-webkit-inner-spin-button,
+#main > #header > div > input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* END Header Section */
+
+/* START Body Section */
+#main > #body {
+  display: flex;
+  align-items: center;
+}
+
+#main > #body > #line {
+  width: 1px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--light-gray);
+}
+
+#main > #body > div {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+#main > #body > div > .center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+  margin-top: 20px;
+}
+
+#main > #body > div > .center > #arrow-icon,
+#main > #body > div > .center > #reset {
+  border-radius: 50%;
+  padding: 15px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  /* margin-right: 5px; */
+  margin-bottom: 10px;
+  background-color: var(--primary-color);
+}
+
+#main > #body > div > .center > #calculate-text,
+#main > #body > div > .center > #reset-text {
+  font-weight: 600;
+}
+
+#main > #body > div > .center > #arrow-icon:hover,
+#main > #body > div > .center > #reset:hover {
+  background-color: var(--black);
+}
+/* END Body Section */
+
+/* START Footer Section */
+#main > #footer > p {
+  font-size: 80px;
+  line-height: 110px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+#main > #footer > p > span {
+  color: var(--primary-color);
+}
+/* END Footer Section */
+
+/* START Responsive Section */
+@media all and (max-width: 992px) {
+  #main {
+    width: 90%;
+    min-height: 65vh;
+    padding: 60px 40px;
+  }
+
+  #main > #header {
+    height: 15%;
+  }
+
+  #main > #header > div {
+    height: 110px;
+  }
+
+  #main > #header > div > input {
+    width: 90%;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  #main > #body {
+    height: 20%;
+  }
+  
+  #main > #body > #line {
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  #main > #body > div {
+    display: flex;
+  }
+
+  #main > #body > div > .center {
+    height: 100%;
+  }
+
+  #main > #body > div > .center > #arrow-icon,
+  #main > #body > div > .center > #reset {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+  }
+
+  #main > #footer {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 65%;
+  }
+  
+  #main > #footer > p {
+    font-size: 70px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  #main {
+    min-height: 95vh;
+    padding: 60px 20px;
+  }
+
+  #main > #header > div > input {
+    height: 40px;
+  }
+
+  #main > #body {
+    flex-direction: column;
+  }
+  
+  #main > #body > div {
+    width: 100%;
+    max-height: 150px;
+  }
+
+  #main > #body > div > .center > #arrow-icon,
+  #main > #body > div > .center > #reset {
+    width: 50px;
+    height: 50px;
+  }
+
+  #main > #footer > p {
+    font-size: 65px;
+  }
+}
+
+@media all and (max-width: 450px) {
+  #main {
+    width: 96%;
+  }
+
+  #main > #header > div > input {
+    font-size: 20px;
+  }
+
+  #main > #body {
+    margin-bottom: 20px;
+  }
+  
+  #main > #body > #line {
+    margin-bottom: 10px;
+  }
+  
+  #main > #body > div > .center {
+    margin-bottom: 70px;
+  }
+
+  #main > #footer > p {
+    font-size: 45px;
+  }
+}
+/* END Responsive Section */
